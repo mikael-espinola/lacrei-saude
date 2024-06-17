@@ -4,8 +4,7 @@ import LinkButton from "@/components/linkButton/LinkButton";
 export default function Home() {
   return (
     <Container>
-      <LinkButton value="sobre" />
-      <LinkButton value="contato" />
+      <h1>Main page</h1>
     </Container>
   );
 }
