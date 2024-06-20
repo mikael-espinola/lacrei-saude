@@ -11,7 +11,6 @@ const Header = () => {
       </LogoContainer>
       <MenuButtons>
         <LinkButton value="sobre" />
-        <LinkButton value="contato" />
       </MenuButtons>
     </Container>
   );

@@ -18,14 +18,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <StyledComponentsRegistry>
-        <body className={inter.className}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+      </head>
+      <body className={inter.className}>
+        <StyledComponentsRegistry>
           <Header />
           {children}
           <Footer />
-        </body>
-        <GlobalStyles />
-      </StyledComponentsRegistry>
+          <GlobalStyles />
+        </StyledComponentsRegistry>
+      </body>
     </html>
   );
 }

@@ -1,6 +1,7 @@
 import { Text } from "@/app/sobre/style";
 import Link from "next/link";
 import React from "react";
+import { Button } from "./style";
 
 interface Props {
   value: string;
@@ -8,9 +9,9 @@ interface Props {
 
 const LinkButton = ({ value }: Props) => {
   return (
-    <Link href={`/${value === "return" ? "" : value}`}>
+    <Button href={`/${value === "return" ? "" : value}`}>
       <Text>{value}</Text>
-    </Link>
+    </Button>
   );
 };
 
