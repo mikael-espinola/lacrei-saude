@@ -12,7 +12,7 @@ const Footer = () => {
     <Container>
       <Spance>
         <LogoContainer>
-          <Logo IsHeader={false} LogoLarge={LogoLarge} LogoSmall={LogoSmall} />
+          <Logo LogoLarge={LogoLarge} LogoSmall={LogoSmall} />
         </LogoContainer>
         <IconsContainer>
           <Icons />

@@ -7,10 +7,11 @@ import {
   BackgroundContainer,
 } from "./style";
 import LinkButton from "../linkButton/LinkButton";
-import LogoLarge from "../../assets/images/logo-xl.svg";
-import LogoSmall from "../../assets/images/logo-assinatura.svg";
 import Link from "next/link";
 import Logo from "../logo/Logo";
+
+import LogoLarge from "../../assets/images/logo-xl.svg";
+import LogoIcon from "../../assets/images/logo-icon.svg";
 
 const Header = () => {
   return (
@@ -18,11 +19,11 @@ const Header = () => {
       <Container>
         <LogoContainer>
           <Link href={"/"}>
-            <Logo IsHeader={true} LogoLarge={LogoLarge} LogoSmall={LogoSmall} />
+            <Logo LogoLarge={LogoLarge} LogoSmall={LogoIcon} />
           </Link>
         </LogoContainer>
         <MenuButtons>
-          <LinkButton value="sobre" />
+          <LinkButton value="especialidades" />
         </MenuButtons>
       </Container>
     </BackgroundContainer>

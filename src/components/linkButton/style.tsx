@@ -12,9 +12,9 @@ export const Button = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: center;
-  padding: 0 2em;
 
   @media (max-width: ${breakpoints.mobile}) {
-    border-radius: 40%;
+    padding: 0.3em;
+    font-size: 12px;
   }
 `;

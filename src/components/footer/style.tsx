@@ -5,10 +5,15 @@ import { breakpoints } from "../style/patterns";
 
 export const Container = styled.div`
   display: flex;
-  padding: 1.4em;
-  padding: 1em;
-  width: 90%;
-  margin: 0 auto;
+  padding: 0.5em 0.2em;
+  width: 100%;
+  margin-bottom: 1em;
+
+  @media (min-width: ${breakpoints.mobile}) {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
 `;
 
 export const Spance = styled.section`
@@ -16,8 +21,7 @@ export const Spance = styled.section`
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  margin: 0 auto;
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid #018762;
   border-top: 1px solid #018762;
   gap: 1em;
 

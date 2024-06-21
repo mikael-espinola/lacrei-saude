@@ -11,26 +11,35 @@ export const BackgroundContainer = styled.div`
 
 export const Container = styled.section`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 1.8em;
   width: 90%;
   margin: 0 auto;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 100%;
+    padding: 0.4em;
+    padding: 1.5em 0 0.5em 0;
+  }
 `;
 export const MenuButtons = styled.div`
   display: flex;
   justify-content: end;
   width: 50%;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    justify-content: center;
+  }
 `;
 export const LogoContainer = styled.div`
   display: flex;
   width: 50%;
+  justify-content: center;
 `;
 
 export const Logo = styled(Image)`
   width: 144px;
   height: 44px;
-  @media (max-width: ${breakpoints.mobile}) {
-  }
 `;

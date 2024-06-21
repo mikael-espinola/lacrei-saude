@@ -11,7 +11,6 @@ interface Props {
 export const Container = styled.div`
   width: 18em;
   height: 20em;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,6 +19,11 @@ export const Container = styled.div`
   border: 1px solid gray;
   border-radius: 8px;
   gap: 8px;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    width: 14em;
+    height: 16em;
+  }
 `;
 
 export const SubContainer = styled.div`
@@ -58,6 +62,11 @@ export const Button = styled(Link)`
   &:hover {
     background-color: #018765;
     color: #fff;
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    height: 36px;
+    font-size: 12px;
   }
 `;
 

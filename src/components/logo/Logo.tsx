@@ -6,11 +6,10 @@ import { useMediaQuery } from "react-responsive";
 interface Props {
   LogoSmall?: any;
   LogoLarge?: any;
-  IsHeader: boolean;
 }
 
-const Logo = ({ LogoSmall, LogoLarge, IsHeader }: Props) => {
-  const isMobileScreen = useMediaQuery({ maxWidth: 600 });
+const Logo = ({ LogoSmall, LogoLarge }: Props) => {
+  const isMobileScreen = useMediaQuery({ maxWidth: 612 });
 
   return <LogoImg src={isMobileScreen ? LogoSmall : LogoLarge} alt="logo" />;
 };
