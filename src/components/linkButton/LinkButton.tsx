@@ -1,5 +1,4 @@
 import { Text } from "@/app/sobre/style";
-import Link from "next/link";
 import React from "react";
 import { Button } from "./style";
 

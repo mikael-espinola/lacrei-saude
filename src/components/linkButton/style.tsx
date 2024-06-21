@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import styled from "styled-components";
+import { breakpoints } from "../style/patterns";
 
 export const Button = styled(Link)`
   background-color: #018765;
@@ -12,4 +13,8 @@ export const Button = styled(Link)`
   display: flex;
   align-items: center;
   padding: 0 2em;
+
+  @media (max-width: ${breakpoints.mobile}) {
+    border-radius: 40%;
+  }
 `;

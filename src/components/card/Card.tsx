@@ -1,6 +1,12 @@
 import React from "react";
-import { Button, Container, Description, SubContainer, Title } from "./style";
-
+import {
+  Button,
+  Container,
+  Description,
+  Icon,
+  SubContainer,
+  Title,
+} from "./style";
 interface Props {
   tema: string;
 }
@@ -10,6 +16,7 @@ type Card = {
   assunto: string;
   descricao: string;
   url?: string;
+  icon: string;
 };
 
 const dataCard: Card[] = [
@@ -18,12 +25,14 @@ const dataCard: Card[] = [
     assunto: "consultas",
     descricao: "Busque um atendimento agora mesmo.",
     url: "https://paciente.lacreisaude.com.br/",
+    icon: "stethoscope",
   },
   {
     id: "1",
     assunto: "quem somos",
     descricao: "Conheça a Missão, Visão e Valores da Lacrei Saúde.",
     url: "https://lacreisaude.com.br/quem-somos/",
+    icon: "digital_wellbeing",
   },
   {
     id: "2",
@@ -31,6 +40,7 @@ const dataCard: Card[] = [
     descricao:
       "Acesse nossa lista de perguntas frequentes e tire suas dúvidas.",
     url: "https://lacreisaude.com.br/ajuda/",
+    icon: "help",
   },
 ];
 
@@ -41,9 +51,10 @@ const Card = ({ tema }: Props) => {
   return (
     <Container key={currentCard?.id}>
       <SubContainer>
-        <span className="material-symbols-outlined">settings</span>
+        <Icon $icon_color="#018762" $icon_size="56px">
+          {currentCard?.icon}
+        </Icon>
       </SubContainer>
-
       <SubContainer>
         <Title>{currentCard?.assunto}</Title>
       </SubContainer>

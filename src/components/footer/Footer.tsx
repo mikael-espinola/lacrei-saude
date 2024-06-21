@@ -1,18 +1,21 @@
 import React from "react";
 import { Container, IconsContainer, Spance } from "./style";
-import Image from "../../assets/images/logo_lacrei.svg";
-import { Logo } from "../header/style";
+import LogoSmall from "../../assets/images/logo-large-vertical.svg";
+import LogoLarge from "../../assets/images/logo-xl.svg";
+import { LogoContainer } from "../header/style";
+
+import Icons from "./Icons/Icons";
+import Logo from "../logo/Logo";
 
 const Footer = () => {
   return (
     <Container>
       <Spance>
-        <Logo src={Image} alt="logo" />
+        <LogoContainer>
+          <Logo IsHeader={false} LogoLarge={LogoLarge} LogoSmall={LogoSmall} />
+        </LogoContainer>
         <IconsContainer>
-          <h4 style={{ color: "red" }}>icon</h4>
-          <h4 style={{ color: "red" }}>icon</h4>
-          <h4 style={{ color: "red" }}>icon</h4>
-          <h4 style={{ color: "red" }}>icon</h4>
+          <Icons />
         </IconsContainer>
       </Spance>
     </Container>

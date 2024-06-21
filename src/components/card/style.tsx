@@ -4,7 +4,8 @@ import styled from "styled-components";
 import { breakpoints } from "../style/patterns";
 
 interface Props {
-  uppercase?: string;
+  $icon_color?: string;
+  $icon_size?: string;
 }
 
 export const Container = styled.div`
@@ -60,9 +61,9 @@ export const Button = styled(Link)`
   }
 `;
 
-// export const Icon = styled.span.attrs(() => ({
-//   className: "material-symbols-outlined",
-// }))`
-//   font-size: "24px";
-//   color: "#000";
-// `;
+export const Icon = styled.span.attrs<Props>(() => ({
+  className: "material-symbols-outlined",
+}))`
+  color: ${(props) => props.$icon_color};
+  font-size: ${(props) => props.$icon_size};
+`;
