@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import StyledComponentsRegistry from "@/lib/registry";
 import GlobalStyles from "./global";
 import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,13 +18,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <StyledComponentsRegistry>
-        <body className={inter.className}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+      </head>
+      <body className={inter.className}>
+        <StyledComponentsRegistry>
           <Header />
           {children}
-        </body>
-        <GlobalStyles />
-      </StyledComponentsRegistry>
+          <Footer />
+          <GlobalStyles />
+        </StyledComponentsRegistry>
+      </body>
     </html>
   );
 }

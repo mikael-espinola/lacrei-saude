@@ -3,6 +3,8 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
+    
+
      * {
         padding: 0;
         margin: 0 ;
@@ -11,7 +13,10 @@ const GlobalStyles = createGlobalStyle`
     body {
         background-color: #fff;
         height: 100vh;
+        width: 100vw;
     }
+
+
 `;
 
 export default GlobalStyles;
