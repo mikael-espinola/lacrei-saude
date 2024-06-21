@@ -1,3 +1,4 @@
+"use client";
 export const theme = {
   colors: {
     "$icon-accent": "#018762",
