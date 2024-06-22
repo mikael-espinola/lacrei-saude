@@ -5,8 +5,7 @@ import styled from "styled-components";
 import { breakpoints } from "../style/patterns";
 
 export const BackgroundContainer = styled.div`
-  background: linear-gradient(to bottom, #f5fffb, #ffffff);
-  width: 100%;
+  background: ${(props) => props.theme.colors["$gradient-header"]};
 `;
 
 export const Container = styled.section`

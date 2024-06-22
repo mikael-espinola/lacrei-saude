@@ -11,7 +11,8 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
      }
     body {
-        background-color: #fff;
+        background-color: ${(props) =>
+          props.theme.colors["$background-default"]};
         height: 100%;
         width: 100%;
     }

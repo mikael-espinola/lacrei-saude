@@ -6,10 +6,12 @@ import { PiLinkedinLogo } from "react-icons/pi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { IconType } from "react-icons";
 import { Tag } from "./style";
+import { theme } from "@/components/style/patterns";
 
 interface IconProp {
   component: IconType;
   link: string;
+  title: string;
 }
 
 type IconKeys =
@@ -22,18 +24,22 @@ const IconComponents: IconProp[] = [
   {
     component: TbBrandFacebook,
     link: "https://www.facebook.com/lacrei.saude/",
+    title: "Facebook",
   },
   {
     component: PiInstagramLogo,
     link: "https://www.instagram.com/lacrei.saude",
+    title: "Instagram",
   },
   {
     component: PiLinkedinLogo,
     link: "https://www.linkedin.com/company/lacrei",
+    title: "LinkedIn",
   },
   {
     component: MdOutlineMailOutline,
-    link: "contato@lacreisaude.com.br",
+    link: "mailto:contato@lacreisaude.com.br",
+    title: "Email",
   },
 ];
 
@@ -41,16 +47,21 @@ const Icons = () => {
   return (
     <>
       {IconComponents.map((icon, index) => {
-        const { component: IconComponent, link } = icon;
+        const { component: IconComponent, link, title } = icon;
         return (
           <Tag
             key={index}
             href={link}
             target="_blank"
+            title={title}
             rel="noopener noreferrer"
           >
             <IconComponent
-              style={{ width: "24px", height: "24px", color: "#018762" }}
+              style={{
+                width: "24px",
+                height: "24px",
+                color: theme.colors["$icon-accent"],
+              }}
             />
           </Tag>
         );
