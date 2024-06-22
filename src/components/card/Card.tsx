@@ -62,7 +62,11 @@ const Card = ({ tema }: Props) => {
         <Description>{currentCard?.descricao}</Description>
       </SubContainer>
       <SubContainer>
-        <Button target="_blank" href={`${currentCard?.url}`}>
+        <Button
+          target="_blank"
+          rel="noopener noreferrer"
+          href={`${currentCard?.url}`}
+        >
           Acesse agora
         </Button>
       </SubContainer>

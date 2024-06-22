@@ -15,10 +15,9 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #ffffff;
-  border: 1px solid gray;
   border-radius: 8px;
   gap: 8px;
+  background-color: ${(props) => props.theme.colors["$background-highlight"]};
 
   @media (max-width: ${breakpoints.mobile}) {
     width: 14em;
@@ -32,7 +31,10 @@ export const SubContainer = styled.div`
 `;
 
 export const Title = styled.h2<Props>`
-  color: #018762;
+  background: ${(props) => props.theme.colors["$gradient-lacrei"]};
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-weight: 400;
   font-size: 24px;
   text-align: center;
@@ -50,18 +52,19 @@ export const Button = styled(Link)`
   padding: 1em 3em;
   height: 48px;
   border-radius: 8px;
-  border: 1px solid #025621;
+  border: 2px solid ${(props) => props.theme.colors["$border-accent"]};
   text-decoration: none;
-  color: green;
-  transition: background-color 250ms ease;
+  color: ${(props) => props.theme.colors["$text-accent"]};
+  transition: background-color 250ms;
   display: flex;
   align-items: center;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors["$background-default"]};
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 
   &:hover {
-    background-color: #018765;
-    color: #fff;
+    background-color: ${(props) => props.theme.colors["$background-accent"]};
+    color: ${(props) => props.theme.colors["$text-invert"]};
+    box-shadow: none;
   }
 
   @media (max-width: ${breakpoints.mobile}) {
@@ -73,6 +76,9 @@ export const Button = styled(Link)`
 export const Icon = styled.span.attrs<Props>(() => ({
   className: "material-symbols-outlined",
 }))`
-  color: ${(props) => props.$icon_color};
+  background: ${(props) => props.theme.colors["$gradient-lacrei"]};
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-size: ${(props) => props.$icon_size};
 `;

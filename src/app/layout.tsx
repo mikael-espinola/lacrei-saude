@@ -3,7 +3,10 @@ import { Inter } from "next/font/google";
 import StyledComponentsRegistry from "@/lib/registry";
 import GlobalStyles from "./global";
 import Header from "@/components/header/Header";
+
 import Footer from "@/components/footer/Footer";
+import Provider from "@/themeProvider/ThemeProvider";
+import ButtonProvider from "@/contextApi/buttonContorls/ButtonControls";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,10 +29,14 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <StyledComponentsRegistry>
-          <Header />
-          {children}
-          <Footer />
-          <GlobalStyles />
+          <ButtonProvider>
+            <Provider>
+              <Header />
+              {children}
+              <Footer />
+              <GlobalStyles />
+            </Provider>
+          </ButtonProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
